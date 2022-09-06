@@ -37,17 +37,6 @@ jobs:
           uses: actions/setup-python@v1
           with:
             python-version: ${{ matrix.python-version }}
-        # Setup Java
-        - name: Set up JDK 1.8
-          if: always()
-          uses: actions/setup-java@v1
-          with:
-            java-version: 1.8
-        # Check for existence of gradle files
-        - name: Check for Existence of Files
-          uses: andstor/file-existence-action@v1
-          with:
-            files: "build.gradle, gradle.properties, settings.gradle, gatorgrader.yml"
         # Install pip
         - name: Install Pip
           if: always()

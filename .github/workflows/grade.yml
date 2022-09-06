@@ -28,4 +28,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Run GatorGradle
-        uses: GatorEducator/gatorgradle-action@v1
+          if: always()
+          run:  |
+            pip install gatorgrade
+            gatorgrade --config config/gatorgrade.yml
