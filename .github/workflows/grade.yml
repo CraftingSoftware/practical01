@@ -1,0 +1,31 @@
+name: Grade
+on: [push, pull_request]
+
+jobs:
+  writing:
+    name: Technical Writing Mastery
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Check Markdown
+        uses: DavidAnson/markdownlint-cli2-action@v4
+        with:
+          globs: writing/reflection.md
+      - name: Check Spelling
+        uses: zwaldowski/cspell-action@v1
+        with:
+          paths: "writing/reflection.md"
+          config: .github/cspell.json
+  grade:
+    runs-on: ubuntu-latest
+    name: GatorGrader
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Run GatorGradle
+        uses: GatorEducator/gatorgradle-action@v1

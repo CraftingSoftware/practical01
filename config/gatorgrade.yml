@@ -1,0 +1,32 @@
+
+--description "Fix bugs in sort.py" MatchCommandRegex --command "python sort.py 23 4 15" --regex "\[0\] 4\n\[1\] 15\n\[2\] 23" --count 1 --exact
+--description "Add descending order feature in sort.py" MatchCommandRegex --command "python sort.py desc 23 4 15" --regex "\[0\] 23\n\[1\] 15\n\[2\] 4" --count 1 --exact
+--description "Create at least 7 commits" CountCommits --count 10
+
+# check the technical writing for various characteristics
+- writing/reflection.md:
+    - description: Ensure that reflection.md file exists in the writing/ directory
+      check: ConfirmFileExists
+    - description: Write a minimum number of meaningful words in the reflection
+      check: CountFileWords
+      options:
+        count: 100
+        exact: false
+    - description: Confirm that the markdown file has the correct number of headers
+      check: CountMarkdownTags
+      options:
+        tag: heading
+        count: 4
+        exact: true
+    - description: Complete all TODOs, remove the TODO markers in the reflection.md
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Delete the 'Add Your Name Here' prompt in the reflection file
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Name Here"
+        count: 0
+        exact: true
