@@ -1,8 +1,6 @@
-# Using Git on Your Own
+# Practical 01: Using Git on Your Own
 
-## Due Date
-
-September 9th, 2022 by midnight
+## Due: September 9th, 2022 by midnight
 
 ## Introduction
 
@@ -15,7 +13,9 @@ In this practical assignment, you will fix and extend a sorting program, `sort.p
 
 ### Installing Tools
 
-For this course, you must use an integrated development environment (IDE), such as [Visual Studio Code](https://code.visualstudio.com/) or [Atom](https://atom.io/), and you must write programs in the [Python programming language](https://www.python.org/). Thus, if you do not have an IDE installed on your laptop, please install either Visual Studio Code or Atom. If you do not have Python installed on your laptop, please install Python 3 using the [installation guide for your operating system](https://docs.python-guide.org/starting/installation/#python-3-installation-guides).
+For this course, you must use an integrated development environment (IDE), such as [Visual Studio Code](https://code.visualstudio.com/) or [Atom](https://atom.io/), and you must write programs in the [Python programming language](https://www.python.org/). Thus, if you do not have an IDE installed on your laptop, please install either Visual Studio Code or Atom. If you do not have Python installed on your laptop, please install Python 3 using the [installation guide for your operating system](https://docs.python-guide.org/starting/installation/#python-3-installation-guides). Finally, you need to install `gatorgrade` by following the next two steps:
+  - First, [install `pipx`](https://pypa.github.io/pipx/installation/)
+  - Then, install `gatorgrade` with `pipx install gatorgrade`
 
 ### Fixing a Bug
 
@@ -85,17 +85,33 @@ Answer all questions in `writing/reflection.md`. As you do, commit your changes 
 
 ## Running GatorGrader
 
-You can gain an approximation of your progress on this assignment by running [GatorGrader](https://github.com/GatorEducator/gatorgrader).
+You can gain an approximation of your progress on this assignment by running [GatorGrader](https://github.com/GatorEducator/gatorgrader) locally. You do need to have `gatorgrade` and Python installed to be able to run this command (see instructions above).
 
 ```bash
 gatorgrade --config config/gatorgrade.yml
 ```
 
-## Assessment Strategy
+## Receiving Assistance
 
-This assignment will be assessed based on the following components:
+If you are having trouble completing any part of this project, then please talk
+with either the course instructor or a student technical during the practical
+session. Alternatively, you may ask questions in the Discord channel for this
+course. Finally, you can schedule a meeting during the course instructor's
+office hours.
 
-- Percentage of Passing GatorGrader Checks: Students are encouraged to repeatedly try to implement a Python program that passes all of the GatorGrader checks by, for instance, creating a program that produces the correct output. Students should also repeatedly revise their technical writing to ensure that it also passes all of GatorGrader's checks about, for instance, the length of its content.
-- GitHub Actions Build Status: Since additional checks on the source code and/or technical writing may be encoded in GitHub Actions and, moreover, all of the GatorGrader checks are also run in GitHub Actions, students will receive a checkmark grade if their last before-the-deadline build passes and a green ✔ appears in their GitHub commit log instead of a red ✗. As with the previous grading component, students are encouraged to repeatedly revise their source code and technical writing in an attempt to get their GitHub Actions build to pass. Please note that spell checking, which is run in GitHub Actions, can often flag proper nouns or other real words if the dictionary it uses does not contain them; to get your GitHub Actions build to pass, you may need to add correctly spelled words that are incorrectly flagged as "unknown" to the list of words in `.github/cspell.json`.
-- Mastery of Technical Writing: Students will also receive a checkmark grade when the responses to the technical writing questions presented in the `writing/reflection.md` reveal a mastery of both writing skills and technical knowledge. To receive a checkmark grade, the submitted writing should have correct spelling, grammar, and punctuation in addition to following the rules of Markdown and providing technically accurate answers.
-- Mastery of Technical Knowledge and Skills: Students will also receive a checkmark grade when their GitHub repository reveals that they have mastered all of the learning objectives of this assignment. As a part of this grade, the instructor will assess aspects of the assignment including, but not limited to, the inclusion of effective source code comments, evidence of best commit practices, correct use of Docker, and correct installation and use of a Python development environment.
+## Practical Assessment
+
+The grade that a student receives on this practical assignment is a checkmark grade (0 or 1) and is based on:
+
+- **GitHub Actions CI Build Status**: Students are encouraged to
+  repeatedly try to complete the assignment until it passes all of GatorGrader's
+  checks. Since additional checks on the source code and/or
+  technical writing may be encoded in GitHub Actions CI's actions and, moreover, all of
+  the GatorGrader checks are also run in GitHub Actions CI, students will receive a
+  checkmark grade if their last before-the-deadline build passes and a green
+  &#x2714; appears in their GitHub commit log instead of a red &#x2717;. 
+
+Students will receive 1 if their solution passes all GatorGrader checks and receives a green  &#x2714;  in their last commit. 
+
+All grades for this project will be reported through a student's GitHub gradebook repository (we will set this up soon).
+
