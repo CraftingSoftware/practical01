@@ -19,16 +19,11 @@ For this course, you must use an integrated development environment (IDE), such 
 
 ### Fixing a Bug
 
-The sorting program, `sort.py`, should take in a list of numbers as arguments and print the numbers in ascending order. Beside each number should be its position.
+The sorting program, `sort.py`, should take in a list of numbers as arguments and print the numbers in ascending order. 
 
 ```console
 $ python sort.py 23 4 15 8 16 42
-[0] 4
-[1] 8
-[2] 15
-[3] 16
-[4] 23
-[5] 42
+[4, 8, 15, 16, 23, 42]
 ```
 
 However, when you run `sort.py`, you will notice that it does not produce the expected output. In fact, you will see an error.
@@ -55,7 +50,7 @@ Once you have finished typing the commit message, you can create the commit. In 
 
 ### Fixing Additional Bugs
 
-When you run `sort.py` again, you will notice that it still does not produce the expected output. Please track down and fix the two additional bugs in `sort.py`. You may need to refer to the Python documentation on [`sys.argv`](https://docs.python.org/3/library/sys.html?highlight=argv#sys.argv) and the [`enumerate`](https://docs.python.org/3/library/functions.html?highlight=enumerate#enumerate) built-in function. As you are fixing these bugs, do not yet perform any Git actions in your IDE.
+When you run `sort.py` again, you will notice that it still does not produce the expected output. Please track down and fix an additional bug in `sort.py`. You may need to refer to the Python documentation on [`sys.argv`](https://docs.python.org/3/library/sys.html?highlight=argv#sys.argv) and the [`enumerate`](https://docs.python.org/3/library/functions.html?highlight=enumerate#enumerate) built-in function. As you are fixing these bugs, do not yet perform any Git actions in your IDE.
 
 Once you have completed the bug fixes, open the version control feature in your IDE and click on `sort.py` in the list of unstaged changes to see the diff. Notice that `sort.py` contains two hunks, or groups of differing lines--one per bug fix. You may be tempted to stage the entire file and create a commit with the message "Fix bugs". However, if you want to revert one of these bug fixes in the future, creating a "Fix bugs" commit would first make it difficult to locate the commit with the bug fix you want to revert and then impossible to `git revert` the one bug fix without reverting the other.
 
@@ -69,15 +64,16 @@ In addition to sorting in ascending order, `sort.py` should be able to sort numb
 
 ```console
 $ python sort.py desc 23 4 15 8 16 42
-[0] 42
-[1] 23
-[2] 16
-[3] 15
-[4] 8
-[5] 4
+[42, 23, 16, 15, 8, 4]
 ```
 
-Please implement this feature and commit it using best commit practices.
+Please implement this feature and commit it using best commit practices. See the following snippet of code for an example to get started. Please refer to the Python documentation on [`sys.argv`](https://docs.python.org/3/library/sys.html?highlight=argv#sys.argv) if needed.
+
+```
+if (args[0] == "desc"):
+    args = args[1:]
+    ...
+```
 
 ### Reflection
 

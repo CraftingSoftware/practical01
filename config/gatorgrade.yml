@@ -31,7 +31,7 @@
   check: MatchCommandFragment
   options:
     command: 'cd src; python sort.py 23 4 15'
-    fragment: 4 15 23
+    fragment: "4 15 23"
     count: 1
     exact: true
 
