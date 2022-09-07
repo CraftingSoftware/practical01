@@ -1,8 +1,3 @@
-
---description "Fix bugs in sort.py" MatchCommandRegex --command "python sort.py 23 4 15" --regex "\[0\] 4\n\[1\] 15\n\[2\] 23" --count 1 --exact
---description "Add descending order feature in sort.py" MatchCommandRegex --command "python sort.py desc 23 4 15" --regex "\[0\] 23\n\[1\] 15\n\[2\] 4" --count 1 --exact
---description "Create at least 7 commits" CountCommits --count 10
-
 # check the technical writing for various characteristics
 - writing/reflection.md:
     - description: Ensure that reflection.md file exists in the writing/ directory
@@ -30,3 +25,26 @@
         fragment: "Add Your Name Here"
         count: 0
         exact: true
+
+# run the program and confirm the existence of fragments in its output
+- description: 'Run the program and confirm the correct output: 4 15 23'
+  check: MatchCommandFragment
+  options:
+    command: 'cd src; python sort.py 23 4 15'
+    fragment: 4 15 23
+    count: 1
+    exact: true
+
+# run the program and confirm the existence of fragments in its output
+- description: 'Run the program and confirm the correct output: 23 15 4'
+  check: MatchCommandFragment
+  options:
+    command: 'cd src; python sort.py 23 4 15'
+    fragment: 23 15 4
+    count: 1
+    exact: true
+# count number of commits in the GitHub repository
+- description: Have at least a specific minimum number of commits in repository
+  check: CountCommits
+  options:
+    count: 7
