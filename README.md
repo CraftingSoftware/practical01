@@ -9,6 +9,8 @@ In this practical assignment, you will fix and extend a sorting program, `sort.p
 - How to create small, focused commits
 - How to write good commit messages
 
+Please read [Using Git on Your Own](https://buildtogether.tech/git-solo/). 
+
 ## Instructions
 
 ### Installing Tools
@@ -36,7 +38,7 @@ Please fix this bug in `sort.py` by importing the `sys` module. Then, in your ID
 
 Click on `sort.py` in the list of unstaged changes. This will open the changes, or "diffs", that you have made to the file. Since you have made only one change to `sort.py`, you can stage the entire file. To do this in Visual Studio Code, hover over `sort.py` in the list of unstaged changes and click the + icon. To do this in Atom, you can either double-click `sort.py` in the list of unstaged changes or single-click `sort.py` and press `Enter`. This will move `sort.py` into the list of staged changes. For those familiar with using the `git` command-line utility, this action is equivalent to running `git add sort.py`.
 
-Next, in the commit message box, type "Import missing sys module". This will be the first line of the commit message, which is also referred to as its subject line. Most of the time, just a subject line will suffice. However, there may be cases where you want to attach more detail to a commit. You can do so in the body of the commit message, which is separated from the subject line by one empty line.
+Next, in the commit message box, type "Import missing sys module" or something similar. This will be the first line of the commit message, which is also referred to as its subject line. Most of the time, just a subject line will suffice. However, there may be cases where you want to attach more detail to a commit. You can do so in the body of the commit message, which is separated from the subject line by one empty line.
 
 Notice that this commit message, "Import missing sys module", abides by [the seven rules of a great Git commit message](https://cbea.ms/git-commit/). Specifically, it is less than 50 characters long, it is capitalized, it does not end with a period, and it uses the [imperative mood](https://en.wikipedia.org/wiki/Imperative_mood). Notice also that it describes not only *what* change was made, but also *why*.
 
@@ -50,13 +52,13 @@ Once you have finished typing the commit message, you can create the commit. In 
 
 ### Fixing Additional Bugs
 
-When you run `sort.py` again, you will notice that it still does not produce the expected output. Please track down and fix an additional bug in `sort.py`. You may need to refer to the Python documentation on [`sys.argv`](https://docs.python.org/3/library/sys.html?highlight=argv#sys.argv) and the [`enumerate`](https://docs.python.org/3/library/functions.html?highlight=enumerate#enumerate) built-in function. As you are fixing these bugs, do not yet perform any Git actions in your IDE.
+When you run `sort.py` again, you will notice that it still does not produce the expected output. Please track down and fix an additional bug in `sort.py`. You may need to refer to the Python documentation on [`sys.argv`](https://docs.python.org/3/library/sys.html?highlight=argv#sys.argv) and the [`enumerate`](https://docs.python.org/3/library/functions.html?highlight=enumerate#enumerate) built-in function. As you are fixing bugs, do not yet perform any Git actions in your IDE.
 
-Once you have completed the bug fixes, open the version control feature in your IDE and click on `sort.py` in the list of unstaged changes to see the diff. Notice that `sort.py` contains two hunks, or groups of differing lines--one per bug fix. You may be tempted to stage the entire file and create a commit with the message "Fix bugs". However, if you want to revert one of these bug fixes in the future, creating a "Fix bugs" commit would first make it difficult to locate the commit with the bug fix you want to revert and then impossible to `git revert` the one bug fix without reverting the other.
+Once you have completed one bug fix, open the version control feature in your IDE and click on `sort.py` in the list of unstaged changes to see the diff. You should see that `sort.py` contains one hunk, or one group of differing lines. You should commit one change (hunk) at a time to keep each commit small and focused. If you find additional bugs, you may be tempted to stage the entire file and create a commit with the message "Fix bugs". However, if you want to revert one of these bug fixes in the future, creating a "Fix bugs" commit would first make it difficult to locate the commit with the bug fix you want to revert and then impossible to `git revert` the one bug fix without reverting the other.
 
-Instead, you should commit the two hunks in two separate commits to keep each commit small and focused. In both IDEs, you can select a hunk by highlighting it. In Visual Studio Code, you can stage the selected hunk by right-clicking, then clicking the "Stage Selected Ranges" item in the menu that appears. In Atom, you can stage the selected hunk by clicking the "Stage Selection" button.
+In both IDEs, you can select a hunk by highlighting it. In Visual Studio Code, you can stage the selected hunk by right-clicking, then clicking the "Stage Selected Ranges" item in the menu that appears. In Atom, you can stage the selected hunk by clicking the "Stage Selection" button.
 
-For each hunk, please write a commit message that abides by [the seven rules of a great Git commit message](https://cbea.ms/git-commit/) and that describes the change and why it was made. Then, create a commit. You should have created two commits in this step.
+For each hunk, please write a commit message that abides by [the seven rules of a great Git commit message](https://cbea.ms/git-commit/) and that describes the change and why it was made. Then, create a commit. You should have created at least one commit in this step.
 
 ### Adding a Feature
 
@@ -90,7 +92,7 @@ gatorgrade --config config/gatorgrade.yml
 ## Receiving Assistance
 
 If you are having trouble completing any part of this project, then please talk
-with either the course instructor or a student technical during the practical
+with either the course instructor or a student technical leader during the practical
 session. Alternatively, you may ask questions in the Discord channel for this
 course. Finally, you can schedule a meeting during the course instructor's
 office hours.
