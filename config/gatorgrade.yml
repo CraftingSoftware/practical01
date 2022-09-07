@@ -5,7 +5,7 @@
     - description: Write a minimum number of meaningful words (80) in the reflection
       check: CountFileWords
       options:
-        count: 100
+        count: 80
         exact: false
     - description: Confirm that the markdown file has the correct number of headers
       check: CountMarkdownTags
@@ -27,24 +27,24 @@
         exact: true
 
 # run the program and confirm the existence of fragments in its output
-- description: 'Run the program and confirm the correct output: 4 15 23'
+- description: 'Run the program and confirm the correct output in ascending order: [4, 15, 23]'
   check: MatchCommandFragment
   options:
     command: 'cd src; python sort.py 23 4 15'
-    fragment: "4 15 23"
+    fragment: [4, 15, 23]
     count: 1
     exact: true
 
 # run the program and confirm the existence of fragments in its output
-- description: 'Run the program and confirm the correct output: 23 15 4'
+- description: 'Run the program and confirm the correct output in descending order: [23, 15, 4]'
   check: MatchCommandFragment
   options:
-    command: 'cd src; python sort.py 23 4 15'
-    fragment: 23 15 4
+    command: 'cd src; python sort.py desc 23 4 15'
+    fragment: [23, 15, 4]
     count: 1
     exact: true
 # count number of commits in the GitHub repository
-- description: Have at least a specific minimum number of commits (7) in repository
+- description: Have at least a specific minimum number of commits (6) in repository
   check: CountCommits
   options:
-    count: 7
+    count: 6
