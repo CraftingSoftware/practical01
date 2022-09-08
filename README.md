@@ -84,13 +84,22 @@ Please implement this feature and commit it using best commit practices.
 
 Answer all questions in `writing/reflection.md`. As you do, commit your changes using best commit practices. Instead of creating a commit at the end with the message, "Answer reflection questions", you should commit after answering each question and describe your changes in the commit messages. For instance, after you answer the first question, you might create a commit with the message, "Reflect on past commit practices".
 
-## Running GatorGrader
+## GatorGrade
 
-You can gain an approximation of your progress on this assignment by running [GatorGrader](https://github.com/GatorEducator/gatorgrader) locally. You do need to have `gatorgrade` and Python installed to be able to run this command (see instructions above).
+You can check the baseline writing and commit requirements of this project by running department's assignment checking `gatorgrade` tool To use `gatorgrade`, you first need to make sure you have Python installed. If not, please see:
 
-```bash
-gatorgrade --config config/gatorgrade.yml
-```
+- [Setting Up Python on Windows](https://realpython.com/lessons/python-windows-setup/)
+- [Python 3 Installation and Setup Guide](https://realpython.com/installing-python/)
+- [How to Install Python 3 and Set Up a Local Programming Environment on Windows 10](https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-windows-10)
+
+Then, you need to install `gatorgrade`:
+
+- First, [install `pipx`](https://pypa.github.io/pipx/installation/)
+- Then, install `gatorgrade` with `pipx install gatorgrade`
+
+Finally, you can run `gatorgrade`:
+
+`gatorgrade --config config/gatorgrade.yml`
 
 ## Receiving Assistance
 
