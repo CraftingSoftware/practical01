@@ -21,16 +21,7 @@ For this course, you must use an integrated development environment (IDE), such 
 
 ### Fixing a Bug
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 The sorting program, `sort.py`, should take in a list of numbers as arguments and print the numbers in ascending order. 
-=======
-The sorting program, `sort.py`, should take in a list of numbers as arguments and print the numbers in ascending order. Beside each number should be its position.
->>>>>>> parent of 0bff9eb... Update gatorgrade.yml with minimum number of words.
-=======
-The sorting program, `sort.py`, should take in a list of numbers as arguments and print the numbers in ascending order. Beside each number should be its position.
->>>>>>> parent of 0bff9eb... Update gatorgrade.yml with minimum number of words.
-
 ```console
 $ python sort.py 23 4 15 8 16 42
 [0] 4
@@ -65,15 +56,7 @@ Once you have finished typing the commit message, you can create the commit. In 
 
 ### Fixing Additional Bugs
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 When you run `sort.py` again, you will notice that it still does not produce the expected output. Please track down and fix an additional bug in `sort.py`. You may need to refer to the Python documentation on [`sys.argv`](https://docs.python.org/3/library/sys.html?highlight=argv#sys.argv) and the [`enumerate`](https://docs.python.org/3/library/functions.html?highlight=enumerate#enumerate) built-in function. As you are fixing bugs, do not yet perform any Git actions in your IDE.
-=======
-When you run `sort.py` again, you will notice that it still does not produce the expected output. Please track down and fix the two additional bugs in `sort.py`. You may need to refer to the Python documentation on [`sys.argv`](https://docs.python.org/3/library/sys.html?highlight=argv#sys.argv) and the [`enumerate`](https://docs.python.org/3/library/functions.html?highlight=enumerate#enumerate) built-in function. As you are fixing these bugs, do not yet perform any Git actions in your IDE.
->>>>>>> parent of 0bff9eb... Update gatorgrade.yml with minimum number of words.
-=======
-When you run `sort.py` again, you will notice that it still does not produce the expected output. Please track down and fix the two additional bugs in `sort.py`. You may need to refer to the Python documentation on [`sys.argv`](https://docs.python.org/3/library/sys.html?highlight=argv#sys.argv) and the [`enumerate`](https://docs.python.org/3/library/functions.html?highlight=enumerate#enumerate) built-in function. As you are fixing these bugs, do not yet perform any Git actions in your IDE.
->>>>>>> parent of 0bff9eb... Update gatorgrade.yml with minimum number of words.
 
 Once you have completed one bug fix, open the version control feature in your IDE and click on `sort.py` in the list of unstaged changes to see the diff. You should see that `sort.py` contains one hunk, or one group of differing lines. You should commit one change (hunk) at a time to keep each commit small and focused. If you find additional bugs, you may be tempted to stage the entire file and create a commit with the message "Fix bugs". However, if you want to revert one of these bug fixes in the future, creating a "Fix bugs" commit would first make it difficult to locate the commit with the bug fix you want to revert and then impossible to `git revert` the one bug fix without reverting the other.
 
