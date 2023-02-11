@@ -1,7 +1,5 @@
 # Practical 01: Using Git on Your Own
 
-## Due: September 9th, 2022 by midnight
-
 ## Introduction
 
 In this practical assignment, you will fix and extend a sorting program, `sort.py`. By the end of this exercise, you should have the tools and knowledge to be able to demonstrate mastery of the following essential technical skills of software engineering:
